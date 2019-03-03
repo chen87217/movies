@@ -1,0 +1,21 @@
+<import src='news-item/news-item-template.wxml' />
+<!--pages/news/news.wxml-->
+<view>
+  <swiper class='swiper-container'  autoplay indicator-dots interval='2000' duration='1000'>
+    <swiper-item> <!--vertical 垂直方向滚动-->
+      <image src="/images/wx.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/vr.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/iqiyi.png"></image>
+    </swiper-item>
+  </swiper>
+
+  <block  wx:for='{{tmp}}' wx:for-item="item" wx:key='idx'>
+    <view bindtap='detail' data-id='{{item.postId}}' data-title='{{item.title}}'>
+      <template is='news-lists' data='{{item}}'></template>
+    </view>
+  </block>
+</view>

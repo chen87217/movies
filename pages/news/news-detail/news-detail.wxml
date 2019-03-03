@@ -1,0 +1,37 @@
+<!--pages/news/news-detail/news-detail.wxml-->
+<view class='detail-container'>
+  <image class='head-image' wx:if='{{playStatus}}' src='{{music_bg}}'></image>
+  <image class='head-image' wx:else src='{{detail.headImgSrc}}'></image>
+  <image class='music-bg' catchtap='onMusic' data-id='{{detail.postId}}'  src='{{playStatus?"/images/music/music-start.png":"/images/music/music-stop.png"}}'></image>
+  <view class='author'>
+    <image src='{{detail.avatar}}'></image>
+    <text class='author-text'>{{detail.author}}</text>
+    <text class='author-const'>发布于</text> 
+    <text class='pub-date'>{{detail.date}}</text>
+  </view>
+  <view class='detail-title'>
+    <text>{{detail.title}}</text>
+  </view>
+
+  <view class='tool'>
+    <view class='circle-img'>
+      <!-- <view catchtap='onCollected'>
+        <image wx:if='{{collected}}' src='/images/icon/collection.png'></image>
+        <image wx:else src='/images/icon/collection-anti.png'></image>
+      </view> -->
+
+      <image  class="share-img"  catchtap='onCollected'
+      src="{{collected?'/images/icon/collection.png':'/images/icon/collection-anti.png'}}">
+      </image>
+
+      <image  class="share-img"  catchtap='onShared'
+      src="{{shared?'/images/icon/share.png':'/images/icon/share-anti.png'}}">
+      </image>
+    </view>
+    <view class='horizon'></view>
+  </view>
+
+  <view class='detail'>
+    {{detail.detail}}
+  </view>
+</view>

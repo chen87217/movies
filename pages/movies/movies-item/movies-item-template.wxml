@@ -1,0 +1,10 @@
+<!--pages/movies/movies-item/movies-item-template.wxml-->
+<import src="../stars/stars-template.wxml" />
+
+<template name='moive-item-template'>
+  <view class='moive-item'>
+    <image class='movie-thumb' src='{{image}}'></image>
+    <text class='movie-title'>{{title}}</text>
+    <template is='stars-template' data='{{stars:stars, score: average}}'></template>
+  </view>
+</template>

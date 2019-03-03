@@ -1,0 +1,12 @@
+<!--pages/movies/movies-more/movies-more.wxml-->
+<import src="../movies-grid/movies-grid-template.wxml" />
+<view>
+   <view class='search-container' >
+    <icon type='search' class='icon-search' size='16' color='#405f80'/>
+    <input type='text' placeholder='血战钢锯岭、你的名字' placeholder-class='placeholder' bindblur='onSearchTiger'></input>
+    <image src='/images/icon/xx.png'  class='icon-cancel' />
+  </view>
+  <view>
+    <template is='movies-grid-template' data='{{...lists}}'/>
+  </view>
+</view>

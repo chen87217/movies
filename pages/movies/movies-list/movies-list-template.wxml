@@ -1,0 +1,18 @@
+<import src="../movies-item/movies-item-template.wxml" />
+
+<template name='movies-list-template'>
+ <view class='movie-list-container'>
+   <view class='movie-nav'>
+    <text class='movie-nav-title'>{{title}}</text>
+    <view class='more' catchtap='onMore' data-category='{{category}}' data-title='{{title}}'> 
+      <text class='more-title'>更多</text>
+      <image src='../../images/icon/arrow-right.png'></image>
+    </view>
+  </view>
+  <view class='movie-list'>
+    <block wx:for='{{items}}' wx:item='item' wx:key='idx'>
+      <template is='moive-item-template' data='{{...item}}'></template>
+    </block>
+  </view>
+ </view>
+</template>

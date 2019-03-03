@@ -1,0 +1,18 @@
+/* pages/movies/movies-item/movies-item-template.wxss */
+
+.moive-item{
+  display: flex;
+  flex-direction: column;
+  margin:5rpx 5rpx;
+}
+
+.movie-thumb{
+  width:240rpx;
+  height: 360rpx;
+}
+
+.movie-title{
+  margin-top:10rpx;
+  font-size: 28rpx;
+  color:#666;
+}

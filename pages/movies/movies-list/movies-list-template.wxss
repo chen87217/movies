@@ -1,0 +1,49 @@
+.movie-list-container{
+  display: flex;
+  flex-direction: column;
+  margin:0 0 20rpx 0;
+  background-color: #fff; 
+}
+
+.movie-nav{
+  height: 48rpx;
+  line-height: 48rpx;
+  margin:20rpx 10rpx;
+}
+
+.movie-nav::after{
+  contain: '';
+  clear: both;
+}
+
+.movie-nav-title, .more-title{
+  font-size: 32rpx;
+  font-weight: 300;
+}
+
+.movie-nav-title{
+  float:left;
+  color:#e3e3e3;
+}
+
+.more{
+  float:right;
+  margin-right:20rpx;
+}
+
+.more image{
+  margin-left:10rpx;
+  width:28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+}
+
+.more-title{
+  vertical-align: middle;
+  color:blue;
+}
+
+.movie-list{
+  display: flex;
+  flex: row;
+} 

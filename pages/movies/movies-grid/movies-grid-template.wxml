@@ -1,0 +1,10 @@
+<import src="../movies-item/movies-item-template.wxml" />
+<template name='movies-grid-template'>
+  <scroll-view class='movie-grid-container' scroll-y='true' bindscrolltolower='onScrollToLower'>
+    <view class='movie-grid-list'>
+      <block wx:for='{{items}}' wx:item='item' wx:key='idx'>
+        <template is='moive-item-template' data='{{...item}}'></template>
+      </block>
+    </view>
+  </scroll-view>
+</template>
